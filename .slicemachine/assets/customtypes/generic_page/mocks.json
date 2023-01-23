@@ -1,0 +1,64 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "identity"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "text_block$6627ca2e-cd05-49c4-bc98-2c37ddf3c460",
+        "name": "text_block",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Material"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aliquip proident ad exercitation ea eiusmod dolor do ad. Irure est quis deserunt laboris sint fugiat minim in mollit tempor ea labore culpa quis."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "rich_text_paragraph",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Ullamco fugiat amet ullamco cupidatat culpa eiusmod consequat consectetur commodo aliquip quis quis. Culpa adipisicing non mollit proident ipsum labore dolore qui tempor est nulla magna id sint. Laborum consequat sunt qui culpa duis fugiat esse quis."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

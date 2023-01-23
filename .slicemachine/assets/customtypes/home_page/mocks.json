@@ -1,0 +1,42 @@
+{
+  "hero_title": {
+    "__TYPE__": "FieldContent",
+    "value": "exercise",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "navbar$1c25a5ce-4638-4bfc-ae3a-87547603c07d",
+        "name": "navbar",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "example_text": {
+              "__TYPE__": "FieldContent",
+              "value": "oil",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "date_picker",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "type": "Date",
+                    "value": "2021-02-24"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

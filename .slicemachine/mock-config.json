@@ -1,0 +1,17 @@
+{
+  "slices": {
+    "Navbar": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TextBlock": {}
+  },
+  "_cts": {
+    "home_page": {},
+    "menu": {
+      "menu_items": {}
+    },
+    "generic_page": {}
+  }
+}
