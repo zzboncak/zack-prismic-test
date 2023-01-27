@@ -2,7 +2,8 @@
   "slices": {
     "Navbar": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "TextBlock": {}

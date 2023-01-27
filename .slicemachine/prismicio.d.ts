@@ -143,22 +143,6 @@ interface NavbarSliceDefaultPrimary {
     example_text: prismicT.KeyTextField;
 }
 /**
- * Item in Navbar → Items
- *
- */
-export interface NavbarSliceDefaultItem {
-    /**
-     * date picker field in *Navbar → Items*
-     *
-     * - **Field Type**: Date
-     * - **Placeholder**: *None*
-     * - **API ID Path**: navbar.items[].date_picker
-     * - **Documentation**: https://prismic.io/docs/core-concepts/date
-     *
-     */
-    date_picker: prismicT.DateField;
-}
-/**
  * Default variation for Navbar Slice
  *
  * - **API ID**: `default`
@@ -166,7 +150,7 @@ export interface NavbarSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type NavbarSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavbarSliceDefaultPrimary>, Simplify<NavbarSliceDefaultItem>>;
+export type NavbarSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavbarSliceDefaultPrimary>, never>;
 /**
  * Slice variation for *Navbar*
  *
@@ -251,6 +235,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { GenericPageDocumentData, GenericPageDocumentDataSlicesSlice, GenericPageDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, MenuDocumentData, MenuDocumentDataMenuItemsItem, MenuDocument, AllDocumentTypes, NavbarSliceDefaultPrimary, NavbarSliceDefaultItem, NavbarSliceDefault, NavbarSliceVariation, NavbarSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefaultItem, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { GenericPageDocumentData, GenericPageDocumentDataSlicesSlice, GenericPageDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, MenuDocumentData, MenuDocumentDataMenuItemsItem, MenuDocument, AllDocumentTypes, NavbarSliceDefaultPrimary, NavbarSliceDefault, NavbarSliceVariation, NavbarSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefaultItem, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

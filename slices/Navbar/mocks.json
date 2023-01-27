@@ -5,23 +5,14 @@
     "primary": {
       "example_text": {
         "__TYPE__": "FieldContent",
-        "value": "earlier",
+        "value": "farm",
         "type": "Text"
       }
     },
     "items": [
       {
         "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "date_picker",
-            {
-              "__TYPE__": "FieldContent",
-              "type": "Date",
-              "value": "2016-12-02"
-            }
-          ]
-        ]
+        "value": []
       }
     ]
   }
