@@ -1,14 +1,40 @@
 {
+  "church_logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+      "width": 3277,
+      "height": 4092
+    },
+    "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+    "width": 3277,
+    "height": 4092,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
   "hero_title": {
     "__TYPE__": "FieldContent",
-    "value": "exercise",
+    "value": "stand",
+    "type": "Text"
+  },
+  "mission_statement": {
+    "__TYPE__": "FieldContent",
+    "value": "highway",
     "type": "Text"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "navbar$1c25a5ce-4638-4bfc-ae3a-87547603c07d",
+        "key": "navbar$d5c4316b-ec0b-42fb-b00b-35a1174ee82b",
         "name": "navbar",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -16,23 +42,14 @@
           "primary": {
             "example_text": {
               "__TYPE__": "FieldContent",
-              "value": "oil",
+              "value": "plain",
               "type": "Text"
             }
           },
           "items": [
             {
               "__TYPE__": "GroupItemContent",
-              "value": [
-                [
-                  "date_picker",
-                  {
-                    "__TYPE__": "FieldContent",
-                    "type": "Date",
-                    "value": "2021-02-24"
-                  }
-                ]
-              ]
+              "value": []
             }
           ]
         }

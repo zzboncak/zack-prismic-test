@@ -38,6 +38,17 @@ export type GenericPageDocument<Lang extends string = string> = prismicT.Prismic
 /** Content for Home Page documents */
 interface HomePageDocumentData {
     /**
+     * Church Logo field in *Home Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.church_logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    church_logo: prismicT.ImageField<never>;
+    /**
      * Hero Title field in *Home Page*
      *
      * - **Field Type**: Text
@@ -48,6 +59,17 @@ interface HomePageDocumentData {
      *
      */
     hero_title: prismicT.KeyTextField;
+    /**
+     * Mission Statement field in *Home Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.mission_statement
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    mission_statement: prismicT.KeyTextField;
     /**
      * Slice Zone field in *Home Page*
      *
