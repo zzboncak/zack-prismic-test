@@ -1,0 +1,81 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "receive"
+  },
+  "name": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Ea aute enim proident do commodo aliqua amet fugiat voluptate magna. Aute sint ut ex sunt aliqua."
+        }
+      }
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "navbar$8b303876-724d-4426-9bce-90562989abaa",
+        "name": "navbar",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "name": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Duis velit qui labore commodo deserunt eiusmod aliquip deserunt aliqua nisi quis magna non eu esse. Ea enim est sint reprehenderit velit et duis officia. Veniam ea irure exercitation magna labore irure."
+                  }
+                }
+              ]
+            },
+            "link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "child_name",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Anim pariatur duis adipisicing ullamco elit eu laborum consectetur proident ad adipisicing aute nostrud laboris. Amet nisi non velit sit ad fugiat qui voluptate dolor ea sit. Velit ad anim commodo aliqua ex culpa labore eu."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "child_link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://google.com"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

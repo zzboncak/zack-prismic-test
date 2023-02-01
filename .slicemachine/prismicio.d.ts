@@ -147,39 +147,115 @@ export interface MenuDocumentDataMenuItemsItem {
  * @typeParam Lang - Language API ID of the document.
  */
 export type MenuDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
-export type AllDocumentTypes = GenericPageDocument | HomePageDocument | MenuDocument;
+/** Content for Navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Name field in *Navigation*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    name: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
+}
 /**
- * Primary content in Navbar → Primary
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavigationDocumentDataSlicesSlice = NavbarSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
+export type AllDocumentTypes = GenericPageDocument | HomePageDocument | MenuDocument | NavigationDocument;
+/**
+ * Primary content in NavigationItem → Primary
  *
  */
 interface NavbarSliceDefaultPrimary {
     /**
-     * Example Text field in *Navbar → Primary*
+     * Name field in *NavigationItem → Primary*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: navbar.primary.example_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **API ID Path**: navbar.primary.name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    example_text: prismicT.KeyTextField;
+    name: prismicT.RichTextField;
+    /**
+     * Link field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navbar.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
 }
 /**
- * Default variation for Navbar Slice
+ * Item in NavigationItem → Items
+ *
+ */
+export interface NavbarSliceDefaultItem {
+    /**
+     * Child Name field in *NavigationItem → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navbar.items[].child_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    child_name: prismicT.RichTextField;
+    /**
+     * Child Link field in *NavigationItem → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navbar.items[].child_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    child_link: prismicT.LinkField;
+}
+/**
+ * Default variation for NavigationItem Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Navbar`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type NavbarSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavbarSliceDefaultPrimary>, never>;
+export type NavbarSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavbarSliceDefaultPrimary>, Simplify<NavbarSliceDefaultItem>>;
 /**
- * Slice variation for *Navbar*
+ * Slice variation for *NavigationItem*
  *
  */
 type NavbarSliceVariation = NavbarSliceDefault;
 /**
- * Navbar Shared Slice
+ * NavigationItem Shared Slice
  *
  * - **API ID**: `navbar`
  * - **Description**: `Navbar`
@@ -257,6 +333,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { GenericPageDocumentData, GenericPageDocumentDataSlicesSlice, GenericPageDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, MenuDocumentData, MenuDocumentDataMenuItemsItem, MenuDocument, AllDocumentTypes, NavbarSliceDefaultPrimary, NavbarSliceDefault, NavbarSliceVariation, NavbarSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefaultItem, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { GenericPageDocumentData, GenericPageDocumentDataSlicesSlice, GenericPageDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, MenuDocumentData, MenuDocumentDataMenuItemsItem, MenuDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, NavbarSliceDefaultPrimary, NavbarSliceDefaultItem, NavbarSliceDefault, NavbarSliceVariation, NavbarSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefaultItem, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

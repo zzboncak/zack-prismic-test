@@ -6,13 +6,20 @@
         "items": {}
       }
     },
-    "TextBlock": {}
+    "TextBlock": {},
+    "NavigationItem": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
   },
   "_cts": {
     "home_page": {},
     "menu": {
       "menu_items": {}
     },
-    "generic_page": {}
+    "generic_page": {},
+    "navigation": {}
   }
 }

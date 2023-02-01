@@ -13,6 +13,10 @@ const routes = [
   {
     type: "home_page",
     path: "/"
+  },
+  {
+    type: "generic_page",
+    path: "/:uid"
   }
 ];
 
