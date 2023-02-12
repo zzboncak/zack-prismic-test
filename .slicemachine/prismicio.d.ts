@@ -213,6 +213,16 @@ interface NavbarSliceDefaultPrimary {
      *
      */
     link: prismicT.LinkField;
+    /**
+     * Link Name field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navbar.primary.link_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link_name: prismicT.KeyTextField;
 }
 /**
  * Item in NavigationItem → Items

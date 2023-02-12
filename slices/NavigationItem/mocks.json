@@ -20,6 +20,11 @@
           "__TYPE__": "ExternalLink",
           "url": "http://google.com"
         }
+      },
+      "link_name": {
+        "__TYPE__": "FieldContent",
+        "value": "fox",
+        "type": "Text"
       }
     },
     "items": [
